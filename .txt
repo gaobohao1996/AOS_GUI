@@ -1,0 +1,12 @@
+%AOS RELEASE Version 1.0
+DN 1	// DN Version
+1	// # of SensorLayers.
+1 12	// Size of SensorLayers
+2	// # of MotorLayers.
+1 17	// Size of MotorLayers
+1 3
+5 1 	// TopK winning of MotorLayer.
+1	// # of HiddenLayers.
+5145	// Size of HiddenLayers
+1 	// TopK winning of HiddenLayer.
+V: Le;	// Modality.
