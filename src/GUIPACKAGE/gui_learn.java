@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.io.FileWriter;
 import java.io.IOException;
 //import pop_up_help;
-
+//trivial test
 public class gui_learn extends JFrame implements ActionListener{
 	//public static MyWindowDemo mw1;
 	//public static MyWindowDemo mw2;
