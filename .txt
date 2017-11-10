@@ -1,7 +1,9 @@
 %AOS RELEASE Version 1.0
 DN 1	// DN Version
-1	// # of SensorLayers.
+3	// # of SensorLayers.
 1 12	// Size of SensorLayers
+1 1
+2 2
 2	// # of MotorLayers.
 1 17	// Size of MotorLayers
 1 3

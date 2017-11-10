@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.io.FileWriter;
 import java.io.IOException;
 //import pop_up_help;
-//trivial test
+// Test Comment
 public class gui_learn extends JFrame implements ActionListener{
 	//public static MyWindowDemo mw1;
 	//public static MyWindowDemo mw2;
@@ -27,13 +27,16 @@ public class gui_learn extends JFrame implements ActionListener{
 	set_windows_sensor set_sensor;
 	set_windows_motor set_motor;
 	set_windows_hidden set_hidden;
+	set_data_address_window set_data_address;
 	JMenuItem item1;
 	JMenuItem item2;
 	Map<String,List<List<Integer>>> all_info = new HashMap<String,List<List<Integer>>>();
 	//Done for here
+	//This line for test
 	
 	
 	public static void main(String args[]){
+		
 		gui_learn demo = new gui_learn();
 		
 	}
@@ -52,10 +55,12 @@ public class gui_learn extends JFrame implements ActionListener{
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		ImageIcon img = new ImageIcon("GENISAMA.png");
+		
+		//Toolkit toolkit = Toolkit.getDefaultToolkit();
+		//int target_width = toolkit.
 		this.setSize(img.getIconWidth(), img.getIconHeight()+80);
 		this.setResizable(false);
 		JLabel j1 = new JLabel();
-		JPanel j2 = new JPanel();
 		
 		j1.setSize(img.getIconWidth(),img.getIconHeight());
 		j1.setIcon(img);
@@ -547,7 +552,7 @@ public class gui_learn extends JFrame implements ActionListener{
 		}
 		if (set_sensor.isShowing() == true)
 		{
-			if (e.getSource() == set_sensor.next)
+			if (e.getSource() == set_sensor.finish)
 			{
 				set_motor = new set_windows_motor(set_sensor.setting_name,this);
 			}
@@ -555,18 +560,19 @@ public class gui_learn extends JFrame implements ActionListener{
 		
 		else if (set_motor.isShowing() == true)
 		{
-			if (e.getSource() == set_motor.next)
+			if (e.getSource() == set_motor.finish)
 			{
 				set_hidden = new set_windows_hidden(set_motor.setting_name,this);
 			}
 		}
 		else if (set_hidden.isShowing() == true)
 		{
-			if (e.getSource() == set_hidden.next)
+			if (e.getSource() == set_hidden.finish)
 			{
 				//System.out.println("Here");
-				write_setting_file(set_hidden.name_field.getText(),set_hidden.address_field.getText());
+				//write_setting_file(set_hidden.name_field.getText(),set_hidden.address_field.getText());
 				//System.out.println(set_hidden.setting_file_name);
+				set_data_address = new set_data_address_window(set_hidden.setting_name,this);
 				
 			}
 		}

@@ -139,29 +139,29 @@ public class set_windows_motor extends JFrame implements ActionListener
 		num_field = new JTextField(String.valueOf(default_num));
 		num_field.setFont(new Font("Dialog",0,word));
 		confirm = new JButton("Confirm");
-		next = new JButton("Next");
-		finish = new JButton("Finish");
+		//next = new JButton("Next");
+		finish = new JButton("Finish/Next");
 		
 		num_of_layers.setPreferredSize(new Dimension(big_gap*2,word+4));
 		num_field.setPreferredSize(new Dimension(big_gap+small_gap,word+4));
 		confirm.setPreferredSize(new Dimension(big_gap+small_gap,word+4));
-		next.setPreferredSize(new Dimension(big_gap+small_gap,word+4));
+		//next.setPreferredSize(new Dimension(big_gap+small_gap,word+4));
 		finish.setPreferredSize(new Dimension(big_gap+small_gap,word+4));
 		
 		confirm.addActionListener(this);
-		next.addActionListener(this);
-		next.addActionListener(father);
+		//next.addActionListener(this);
 		finish.addActionListener(this);
+		finish.addActionListener(father);
 		
 		confirm.setFont(new Font("Dialog",0,word));
 		finish.setFont(new Font("Dialog",0,word));
-		next.setFont(new Font("Dialog",0,word));
+		//next.setFont(new Font("Dialog",0,word));
 		
 		lower.add(num_of_layers);
 		lower.add(num_field);
 		lower.add(confirm);
 		lower.add(finish);
-		lower.add(next);
+		//lower.add(next);
 		
 	}
 	
@@ -286,12 +286,15 @@ public class set_windows_motor extends JFrame implements ActionListener
 			finish.setBackground(Color.red);
 			finish.setText("Finished");
 			finish.setEnabled(false);
+			this.dispose();
 				
 		}
+		/**
 		else if(e.getSource() == next)
 		{
 			this.dispose();
 		}
+		*/
 	}
 
 }
